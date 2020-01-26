@@ -11,7 +11,7 @@ stages:
 
 deploy:
   stage: deploy
-  image: pierrefevrier/ansible-playbook:2.9.4.0
+  image: pierrefevrier/ansible-playbook:2.9.4.1
   before_script:
     ## Run ssh-agent (inside the build environment)
     - eval $(ssh-agent -s)
@@ -24,6 +24,6 @@ deploy:
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
   script:
-    - ansible-playbook -i "host.docker.internal," playbook/deploy.yml --extra-vars "ansible_user=YOUR_TARGET_SSH_USER"
+    - ansible-playbook -i "host.docker.internal," deploy.yml --extra-vars "ansible_user=YOUR_TARGET_SSH_USER"
 
 ```
