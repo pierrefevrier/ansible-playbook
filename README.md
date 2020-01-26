@@ -1,4 +1,4 @@
-This docker image is for those who want to play Ansible from Docker container.
+This Docker image is for those who want to play Ansible from Docker container.
 
 # Sample
 
