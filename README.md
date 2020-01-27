@@ -6,6 +6,7 @@ This Docker image is for those who want to play Ansible from Docker container.
 - Create `SSH_PRIVATE_KEY` environment variable in your GitLab project and copy/paste your SSH private key as value.
 - Add the public SSH key to the file `~/.ssh/authorized_keys`, in this target host.
 - Run your playbook with the following gitlab-ci snippet:
+
 ```yml
 image: alpine:latest
 
